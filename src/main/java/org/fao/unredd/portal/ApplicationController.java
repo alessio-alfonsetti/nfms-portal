@@ -216,13 +216,15 @@ public class ApplicationController {
         	 * 
         	 * @author Alfonsetti
         	 */
+    		System.out.println("Test layers.json");
     		if(request.getParameterMap().containsKey("fiji"))
     		{
-    			System.out.println("testfiji");
+    			System.out.println(" fiji");
     			response.getWriter().print("layers_json = ");
     		}    		
     		else if(request.getParameterMap().containsKey("jsonp")) {
-        		response.getWriter().print("layers_json = ");	
+    			System.out.println(" standard");
+    			response.getWriter().print("layers_json = ");	
     		}
     		
 			response.getWriter().print(setLayerTimes());
